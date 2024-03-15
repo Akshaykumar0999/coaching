@@ -2,14 +2,12 @@ import "./index.css";
 import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { Link } from "react-router-dom/cjs/react-router-dom";
+import { Link } from "react-router-dom";
 
 // import { white } from "@mui/material/colors";
 // import { border } from "@mui/system";
 
-const Navbar = () => {
-  return (
-    <>
+const Navbar = () => (
     <nav className="navbar">
       <div className="navbar-left">
         <Link to='/' className="logo">LOGO</Link>
@@ -61,8 +59,6 @@ const Navbar = () => {
         </a>
       </div>
     </nav>
-    </>
   );
-};
 
 export default Navbar;

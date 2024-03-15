@@ -1,9 +1,6 @@
 import React from 'react'
 
-const Videos = () => {
-  return (
+const Videos = () => (
     <div>Videos</div>
   )
-}
-
 export default Videos

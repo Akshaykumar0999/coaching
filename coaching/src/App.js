@@ -1,32 +1,23 @@
 import "./App.css";
 
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Projects from "./components/Project";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Projects from "./components/Projects";
 import Videos from "./components/Videos";
 
-function App() {
-  return (
+const App = () => (
     <>
-      <Router>
+      <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route path="/" exact>
-            {" "}
-            <Home />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/videos">
-            <Videos />
-          </Route>
-          <Route path="*" element={<Home to="/" />} />
+          <Route exact path="/" component={Home} />
+          <Route exact  path="/projects" component={Projects} />
+          <Route exact  path="/videos" component={Videos} />
         </Switch>
-      </Router>
+      </BrowserRouter>
     </>
   );
-}
+
 
 export default App;
